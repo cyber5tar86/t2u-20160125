@@ -1,0 +1,26 @@
+把 T2uSvr 可执行文件放到相应的嵌入式板子
+
+加入开机自启动脚本中
+
+命令行参数说明
+
+用法一：
+T2uSvr -c <config file>
+  config file:	从文件读取服务器参数，配置文件参考T2uSvr.conf
+  
+  例如：T2uSvr -c /etc/T2uSvr.conf
+
+用法二：
+T2uSvr -c <config file> -u <uuid file>
+  config file:	从文件读取服务器参数，配置文件参考T2uSvr.conf
+  uuid file:    从文件读取UUID（UUID作为一个文本字符串保存在该文件中）
+
+  例如：T2uSvr -c /etc/T2uSvr.conf -u /tmp/uuid
+
+用法三：
+T2uSvr <uuid> <server addr> <server port> [server key]
+  uuid:		设备UUID（唯一序列号）
+  server addr	服务器地址
+  server port	服务器端口
+  server key	服务器密钥
+
